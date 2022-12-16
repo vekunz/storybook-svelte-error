@@ -1,38 +1,35 @@
-# create-svelte
+# Storybook & SvelteKit 1.0.0 Problem
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+```sh
+npm install
+npm run storybook
 ```
 
-## Developing
+**Error:**
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
+ERR! Error [ERR_PACKAGE_PATH_NOT_EXPORTED]: No "exports" main defined in C:\path-to-repo\node_modules\@sveltejs\vite-plugin-svelte\package.json
+ERR!     at new NodeError (node:internal/errors:387:5)
+ERR!     at throwExportsNotFound (node:internal/modules/esm/resolve:365:9)
+ERR!     at packageExportsResolve (node:internal/modules/esm/resolve:589:7)
+ERR!     at resolveExports (node:internal/modules/cjs/loader:529:36)
+ERR!     at Function.Module._findPath (node:internal/modules/cjs/loader:569:31)
+ERR!     at Function.Module._resolveFilename (node:internal/modules/cjs/loader:981:27)
+ERR!     at Function.Module._load (node:internal/modules/cjs/loader:841:27)
+ERR!     at Module.require (node:internal/modules/cjs/loader:1067:19)
+ERR!     at require (node:internal/modules/cjs/helpers:103:18)
+ERR!     at pluginConfig (C:\path-to-repo\node_modules\@storybook\builder-vite\dist\vite-config.js:161:34)
+ERR!  Error [ERR_PACKAGE_PATH_NOT_EXPORTED]: No "exports" main defined in C:\path-to-repo\node_modules\@sveltejs\vite-plugin-svelte\package.json
+ERR!     at new NodeError (node:internal/errors:387:5)
+ERR!     at throwExportsNotFound (node:internal/modules/esm/resolve:365:9)
+ERR!     at packageExportsResolve (node:internal/modules/esm/resolve:589:7)
+ERR!     at resolveExports (node:internal/modules/cjs/loader:529:36)
+ERR!     at Function.Module._findPath (node:internal/modules/cjs/loader:569:31)
+ERR!     at Function.Module._resolveFilename (node:internal/modules/cjs/loader:981:27)
+ERR!     at Function.Module._load (node:internal/modules/cjs/loader:841:27)
+ERR!     at Module.require (node:internal/modules/cjs/loader:1067:19)
+ERR!     at require (node:internal/modules/cjs/helpers:103:18)
+ERR!     at pluginConfig (C:\path-to-repo\node_modules\@storybook\builder-vite\dist\vite-config.js:161:34) {
+ERR!   code: 'ERR_PACKAGE_PATH_NOT_EXPORTED'
+ERR! }
 ```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
